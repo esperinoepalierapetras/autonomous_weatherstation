@@ -1,7 +1,7 @@
 # autonomous_weatherstation
-Autonomous Meteorological Weather Station Client - Server with Raspberry Pi 3 B+ and PLC S7-1200
-
-Αυτόνομος Μετεωρολογικός Σταθμός με Δικτυακή Επικοινωνία Raspberry Pi 3 B+ and PLC S7-1200
+Αποθετήριο του Σχολείου Εσπερινό ΕΠΑΛ Ιεράπετρας για τη συμμετοχή στον Διαγωνισμό Ρομποτικής Ανοιχτών Τεχνολογιών
+Project's Name: Autonomous Meteorological Weather Station Client - Server with Raspberry Pi 3 B+ and PLC S7-1200
+Όνομα_έργου: Αυτόνομος Μετεωρολογικός Σταθμός με Δικτυακή Επικοινωνία Raspberry Pi 3 B+ and PLC S7-1200
 
 Ο μετεωρολογικός σταθμός συνοπτικά περιλαμβάνει:
 •	Το Εξυπηρετητή (Server)
