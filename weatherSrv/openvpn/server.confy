@@ -1,0 +1,21 @@
+server
+port 1194
+proto tcp
+dev tun
+ca /etc/openvpn/server/ca.crt
+cert /etc/openvpn/server/server.crt
+key /etc/openvpn/server/server.key
+dh /etc/openvpn/server/dh2048.pem
+server 172.17.8.0 255.255.255.0
+keepalive 10 120
+comp-lzo
+user nobody
+group users
+tun-mtu 1500
+cipher none
+#client-to-clinet
+#log-append /var/log/openvpn.log
+#cipher AES-128-CBC
+status /var/log/openvpn-status.log 10
+verb 3
+

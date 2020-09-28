@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<script src="chartjs2/js/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.getJSON("showtemp.php", function(data_points) {
+		var json = data_points
+		var dataPoints = [];
+		for (key in json){
+			dataPoints.push({label: key, y: json[key]});
+		}
+		var len = data_points.length;
+			
+
+			for (var i = 0; i < len; i++) {
+				if (data_points[i].creation_time == "creation_time") {
+					dataPoints.Temperature.push(json[key]);
+				}
+				
+									
+			}
+			
+	
+	
+			
+			//Better to construct options first and then pass it as a parameter
+			var options = {
+				zoomEnabled: true,
+				animationEnabled: true,
+				title: {
+					text: "Try Zooming - Panning"
+				},
+				axisY: {
+					includeZero: false,
+					lineThickness: 1
+				},
+				data: [
+				{
+					type: "column",
+					dataPoints: dataPoints
+				}
+				]
+			};
+			var chart = new CanvasJS.Chart("chartContainer", options);
+			var startTime = new Date();
+			
+			chart.render();
+			var endTime = new Date();
+			document.getElementById("timeToRender").innerHTML = "Time to Render: " + (endTime - startTime) + "ms";
+			
+		
+	});	
+	});
+</script>
+<style>
+	#timeToRender {
+		position:absolute; 
+		top: 10px; 
+		font-size: 20px; 
+		font-weight: bold; 
+		background-color: #d85757;
+		padding: 0px 4px;
+		color: #ffffff;
+	}
+</style>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<span id="timeToRender"></span>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>

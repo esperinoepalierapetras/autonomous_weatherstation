@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#if  ps aux  | grep -v grep | grep "8035:localhost:8000" ; then
+#echo "Exiting"
+#	exit
+#fi
+#/usr/bin/ssh -MNf -L8035:localhost:8000 192.168.1.12 &
+/usr/bin/rsync -avzh /home/pi/python/photos/ 192.168.1.5:/var/www/html/photos/
